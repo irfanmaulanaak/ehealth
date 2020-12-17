@@ -1,0 +1,6 @@
+{this.state.tenkes_status ? (
+          <FormPenyakit
+            idPasien={this.state.idPasien}
+            addPenyakit={this.state.addPenyakit}
+          />
+        ) : null
