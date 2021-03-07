@@ -13,6 +13,9 @@ const deploy = async () => {
     const result = await new web3.eth.Contract(compiledEhealth.abi)
         .deploy({ data: "0x"+compiledEhealth.evm.bytecode.object})
         .send({ from: account, gasPrice: 150000000 });
+    
+    console.log(compiledEhealth.abi)
     console.log('Contract deployed to ',result.options.address)
+    
 };
 deploy();
