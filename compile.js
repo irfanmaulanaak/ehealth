@@ -34,5 +34,6 @@ if (output.errors) {
             JSON.stringify(contract, null, 2),
             "utf8"
         );
+        console.log("Check the json file at ", buildPath,`${contractName}.json`)
     }
 }
