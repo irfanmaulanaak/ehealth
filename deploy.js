@@ -2,7 +2,7 @@
 const Web3 = require('web3');
 const compiledEhealth = require('./build/Ehealth.json');
 
-const ethprovider = new Web3.providers.HttpProvider("http://35.208.233.245:8545");
+const ethprovider = new Web3.providers.HttpProvider("http://34.70.214.154:8545");
 const web3 = new Web3('http://');
 web3.setProvider(ethprovider);
 const deploy = async () => {

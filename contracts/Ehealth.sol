@@ -119,8 +119,6 @@ contract Ehealth{
                 _nama = rsList[i].nama;
                 _idRS = rsList[i].idRS;
                 _alamat = rsList[i].alamat;
-            }else{
-                revert("ID RS Salah");
             }
         }
         return(_ethaddress, _nama, _idRS, _alamat);
@@ -132,6 +130,11 @@ contract Ehealth{
             if(msg.sender == rsList[i].ethaddress){
                 return true;
             }
+        }
+    }
+    function check_manager() public view returns(bool) {
+        if(manager == msg.sender){
+            return true;
         }
     }
 
