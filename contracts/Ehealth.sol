@@ -76,8 +76,6 @@ contract Ehealth{
                 pasienList[i].tekananDarah=_tekananDarah;
                 pasienList[i].bb=_bb;
                 pasienList[i].tb=_tb;
-            }else{
-                revert("NIK Salah");
             }
         }
     }
@@ -99,8 +97,6 @@ contract Ehealth{
                 for(uint j = 0;j<pasienList[i].informasi_penyakit.length;j++){
                     _info[j] = pasienList[i].informasi_penyakit[j];
                 }
-            }else{
-                revert("NIK salah");
             }
         }
         return(_info);
